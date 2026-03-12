@@ -234,7 +234,7 @@ Question:
 {question}
 """
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key="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")
 
         response = client.chat.completions.create(
 
@@ -317,7 +317,7 @@ with tab3:
 
         prompt=f"Create study flashcards from:\n{context}"
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key="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")
 
         response = client.chat.completions.create(
 
@@ -373,7 +373,7 @@ with tab4:
 
         prompt=f"Summarize this content:\n{context}"
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key="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")
 
         response = client.chat.completions.create(
 
