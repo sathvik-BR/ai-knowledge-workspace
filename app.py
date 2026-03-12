@@ -234,12 +234,10 @@ Question:
 {question}
 """
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
         response = client.chat.completions.create(
-
         model="llama-3.1-8b-instant",
-
         messages=[{"role":"user","content":prompt}]
         )
 
@@ -267,7 +265,6 @@ Question:
         st.rerun()
 
 
-    # -------- DOWNLOAD CHAT --------
     if st.session_state.messages:
 
         chat_text=""
@@ -317,12 +314,10 @@ with tab3:
 
         prompt=f"Create study flashcards from:\n{context}"
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
         response = client.chat.completions.create(
-
         model="llama-3.1-8b-instant",
-
         messages=[{"role":"user","content":prompt}]
         )
 
@@ -373,12 +368,10 @@ with tab4:
 
         prompt=f"Summarize this content:\n{context}"
 
-        client = Groq(api_key="YOUR_GROQ_API_KEY")
+        client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
         response = client.chat.completions.create(
-
         model="llama-3.1-8b-instant",
-
         messages=[{"role":"user","content":prompt}]
         )
 
